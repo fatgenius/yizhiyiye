@@ -1,0 +1,27 @@
+<launch>
+    <node name="ls01b_v2" pkg="ls01b_v2" type="ls01b_v2" output="screen">
+        <!--设置激光数据topic名称-->
+        <param name="scan_topic" value="scan"/>         
+        <!--激光frame-->
+        <param name="frame_id" value="laser_link"/>   
+        <!--雷达连接的串口-->
+        <!--Already changed-->
+        <param name="serial_port" value="/dev/laser"/>  
+        <!--雷达连接的串口波特率-->
+        <param name="baud_rate" value="460800" />   
+        <!--雷达角度分辨率-->
+        <param name="angle_resolution" value="0.25"/>  
+        <!--设置为true探测不到区域会变成最大值-->
+        <param name="zero_as_max" value="false"/> 
+        <!--true：探测不到区域为0-->
+        <!--false：探测不到区域为inf-->
+        <param name="min_as_zero" value="false"/>   
+        <!--雷达转速-->
+        <param name="rpm" value="600"/> 
+        <!--角度补偿，非同轴-->                
+        
+        <param name="angle_compensate" value="true"/>  
+        <!---->
+        <rosparam file="$(find ls01b_v2)/launch/includes/filter.yaml" command="load"/>
+    </node>
+</launch>

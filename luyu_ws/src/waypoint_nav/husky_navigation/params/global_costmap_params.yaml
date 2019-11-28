@@ -1,0 +1,10 @@
+global_costmap:
+  global_frame: odom
+  robot_base_frame: base_link
+  update_frequency: 10  #original is 5 Du butian made the change in 9-9 2019
+  publish_frequency: 1
+  width: 100.0
+  height: 100.0
+  static_map: true
+  rolling_window: false
+  transform_tolerance: 1.0

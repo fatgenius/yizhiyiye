@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+
+<launch>
+
+    <!-- Run luyu_bringup -->
+    <include file="$(find outdoor_waypoint_nav)/launch/include/luyu_bringup.launch" />
+
+    <!-- launch leishen lidar -->
+     <include file="$(find ls01b_v2)/launch/ls01b_v2.launch" />
+   
+
+    <!-- launch razor_imu_9dof-->
+    <include file="$(find razor_imu_9dof)/launch/razor-pub.launch" />
+    
+    <!-- launch gps -->
+    <include file="$(find outdoor_waypoint_nav)/launch/include/gps.launch" />
+
+    <!-- Launch robot_localization and navsat -->
+    <include file="$(find outdoor_waypoint_nav)/launch/include/localization_run.launch"/>
+
+    <!-- Run gmapping to create map -->
+    <include file="$(find husky_navigation)/launch/gmapping.launch" />
+
+    <!-- Run husky_navigation to enable move_base -->
+    <include file="$(find husky_navigation)/launch/move_base_nav.launch" />
+
+    <!-- Run rviz -->
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find outdoor_waypoint_nav)/rviz_config/model.rviz" />
+
+
+</launch>

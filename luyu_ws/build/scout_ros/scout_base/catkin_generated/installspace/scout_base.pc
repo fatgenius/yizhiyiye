@@ -1,0 +1,8 @@
+prefix=/home/tealligence/luyu_ws/install
+
+Name: scout_base
+Description: Description of scout_base
+Version: 0.3.3
+Cflags: -I/home/tealligence/luyu_ws/install/include
+Libs: -L/home/tealligence/luyu_ws/install/lib -lscout_base
+Requires: hardware_interface scout_msgs roscpp sensor_msgs

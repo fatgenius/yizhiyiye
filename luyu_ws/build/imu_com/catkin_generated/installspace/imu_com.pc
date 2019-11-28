@@ -1,0 +1,8 @@
+prefix=/home/tealligence/luyu_ws/install
+
+Name: imu_com
+Description: Description of imu_com
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/tealligence/luyu_ws/install/lib 
+Requires: 

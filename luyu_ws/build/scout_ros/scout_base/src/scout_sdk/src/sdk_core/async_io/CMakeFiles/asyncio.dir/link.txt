@@ -1,0 +1,2 @@
+/usr/bin/ar qc /home/tealligence/luyu_ws/devel/lib/libasyncio.a  CMakeFiles/asyncio.dir/src/async_serial.cpp.o CMakeFiles/asyncio.dir/src/async_can.cpp.o
+/usr/bin/ranlib /home/tealligence/luyu_ws/devel/lib/libasyncio.a

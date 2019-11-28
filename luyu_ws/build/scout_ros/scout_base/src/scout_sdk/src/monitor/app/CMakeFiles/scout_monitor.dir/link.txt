@@ -1,0 +1,1 @@
+/usr/bin/c++   -O3 -DNDEBUG   CMakeFiles/scout_monitor.dir/app_scout_monitor.cpp.o  -o /home/tealligence/luyu_ws/devel/lib/scout_base/scout_monitor -rdynamic /home/tealligence/luyu_ws/devel/lib/libmonitor.a /home/tealligence/luyu_ws/devel/lib/libscoutbase.a /home/tealligence/luyu_ws/devel/lib/libasyncio.a -lpthread -lncurses -lform 
